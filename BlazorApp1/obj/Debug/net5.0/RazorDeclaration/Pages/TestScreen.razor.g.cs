@@ -96,6 +96,13 @@ using BlazorApp1.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\Pages\TestScreen.razor"
+using Blazorise.RichTextEdit;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/testscreen")]
     public partial class TestScreen : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -105,18 +112,32 @@ using BlazorApp1.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\Pages\TestScreen.razor"
+#line 118 "F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\Pages\TestScreen.razor"
        
-    private Modal modalRef;
+    private List<BlazorApp1.Models.TestScreen> ListTestScreen;
 
-    private void ShowModal()
+    protected override async Task OnInitializedAsync()
     {
-        modalRef.Show();
+        ListTestScreen = TestScreenService.GetAllProject().ToList();
+    }
+    private RichTextEdit richTextEditRef;
+    private bool readOnly;
+    private string contentAsHtml;
+    private string contentAsDeltaJson;
+    private string contentAsText;
+    private string savedContent;
+
+    public async Task OnContentChanged()
+    {
+        contentAsHtml = await richTextEditRef.GetHtmlAsync();
+        contentAsDeltaJson = await richTextEditRef.GetDeltaAsync();
+        contentAsText = await richTextEditRef.GetTextAsync();
     }
 
-    private void HideModal()
+    public async Task OnSave()
     {
-        modalRef.Hide();
+        savedContent = await richTextEditRef.GetHtmlAsync();
+        await richTextEditRef.ClearAsync();
     }
 
 #line default

@@ -87,6 +87,13 @@ using Blazorise;
 #line hidden
 #nullable disable
 #nullable restore
+#line 12 "F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\_Imports.razor"
+using Blazorise.RichTextEdit;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\Pages\ProjectDetail.razor"
 using BlazorApp1.Services;
 

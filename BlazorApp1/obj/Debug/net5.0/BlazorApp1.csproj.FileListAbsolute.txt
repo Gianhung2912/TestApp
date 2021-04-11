@@ -205,3 +205,4 @@ F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\obj\Debug\net5.0\RazorDeclarati
 F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\obj\Debug\net5.0\Razor\Pages\ProjectDetail.razor.g.cs
 F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\obj\Debug\net5.0\RazorDeclaration\Pages\TestScreen.razor.g.cs
 F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\obj\Debug\net5.0\Razor\Pages\TestScreen.razor.g.cs
+F:\Nam 4\KhoaLuanTotNghiep\BlazorApp1\BlazorApp1\bin\Debug\net5.0\Blazorise.RichTextEdit.dll

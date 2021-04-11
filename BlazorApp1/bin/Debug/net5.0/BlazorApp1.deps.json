@@ -27,6 +27,7 @@
         "dependencies": {
           "Blazorise.Bootstrap": "0.9.3.3",
           "Blazorise.Icons.FontAwesome": "0.9.3.3",
+          "Blazorise.RichTextEdit": "0.9.3.3",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.4",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.4",
           "Microsoft.AspNetCore.Identity.UI": "5.0.4",
@@ -364,6 +365,22 @@
         },
         "compile": {
           "lib/net5.0/Blazorise.Icons.FontAwesome.dll": {}
+        }
+      },
+      "Blazorise.RichTextEdit/0.9.3.3": {
+        "dependencies": {
+          "Blazorise": "0.9.3.3",
+          "Microsoft.AspNetCore.Components": "5.0.0",
+          "Microsoft.AspNetCore.Components.Web": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Blazorise.RichTextEdit.dll": {
+            "assemblyVersion": "0.9.3.3",
+            "fileVersion": "0.9.3.3"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Blazorise.RichTextEdit.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -3865,6 +3882,13 @@
       "sha512": "sha512-dAL9YzaMIFaHx765xSAofeeNCcAkUCNuk0BjWqvlSdwIdQYbAIA5zMXxJENoWDSaqxkjuCohllWV6H/Iek8Zqg==",
       "path": "blazorise.icons.fontawesome/0.9.3.3",
       "hashPath": "blazorise.icons.fontawesome.0.9.3.3.nupkg.sha512"
+    },
+    "Blazorise.RichTextEdit/0.9.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vy689ER/wD8i9Ki8mtYGqJO0r6+t90pWAIEfVPCWoLboYJgocApfbNbikuofEfL9z70zeftF1aWN4SHIPi960A==",
+      "path": "blazorise.richtextedit/0.9.3.3",
+      "hashPath": "blazorise.richtextedit.0.9.3.3.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

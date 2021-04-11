@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[0.9.3.3, )"
             },
+            "Blazorise.RichTextEdit": {
+              "target": "Package",
+              "version": "[0.9.3.3, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.4, )"

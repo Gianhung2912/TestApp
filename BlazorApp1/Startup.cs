@@ -4,6 +4,7 @@ using BlazorApp1.Services;
 using Blazorise;
 using Blazorise.Bootstrap;
 using Blazorise.Icons.FontAwesome;
+using Blazorise.RichTextEdit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -50,7 +51,8 @@ namespace BlazorApp1
                 options.ChangeTextOnKeyPress = true; // optional
             })
                 .AddBootstrapProviders()
-                .AddFontAwesomeIcons();
+                .AddFontAwesomeIcons()
+              .AddBlazoriseRichTextEdit();
 
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<IProjectDetailService, ProjectDetailService>();
