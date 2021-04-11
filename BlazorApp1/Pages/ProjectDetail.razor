@@ -1,0 +1,39 @@
+﻿@page "/projectdetail"
+
+@using BlazorApp1.Services;
+
+@inject IProjectDetailService ProjectDetailService
+<h3>ProjectDetail</h3>
+<div>
+    <button> + New Screen </button>
+</div>
+<Table>
+    <TableHeader>
+        <TableRow>
+            <TableHeaderCell>Id</TableHeaderCell>
+            <TableHeaderCell>Screen name</TableHeaderCell>
+            <TableHeaderCell>Link</TableHeaderCell>
+            <TableHeaderCell>Action</TableHeaderCell>
+        </TableRow>
+    </TableHeader>
+    <TableBody>
+        @foreach (var projectdetail in ListProjectDetail)
+        {
+        <TableRow>
+            <TableRowCell>@projectdetail.Id</TableRowCell>
+            <TableRowCell>@projectdetail.ScreenName</TableRowCell>
+            <TableRowCell>@projectdetail.Links</TableRowCell>
+            <TableRowCell> <button> Test </button> </TableRowCell>
+        </TableRow>
+        }
+    </TableBody>
+</Table>
+
+@code {
+    private List<BlazorApp1.Models.ProjectDetail> ListProjectDetail;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ListProjectDetail = ProjectDetailService.GetAllProject().ToList();
+    }
+}

@@ -1,0 +1,37 @@
+﻿@page "/projects"
+
+@using BlazorApp1.Services;
+
+@inject IProjectService ProjectService
+<h3>Project</h3>
+<div>
+    <button> + New Project </button>
+</div>
+<Table>
+    <TableHeader>
+        <TableRow>
+            <TableHeaderCell>Id</TableHeaderCell>
+            <TableHeaderCell>Project name</TableHeaderCell>
+            <TableHeaderCell>Action</TableHeaderCell>
+        </TableRow>
+    </TableHeader>
+    <TableBody>
+        @foreach (var project in ListProject)
+        {
+            <TableRow>
+                <TableRowCell>@project.Id</TableRowCell>
+                <TableRowCell>@project.ProjectName</TableRowCell>
+                <TableRowCell> <button> Edit </button> </TableRowCell>
+            </TableRow>
+        }
+    </TableBody>
+</Table>
+
+@code {
+    private List<BlazorApp1.Models.Project> ListProject;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ListProject = ProjectService.GetAllProject().ToList();
+    }
+}
